@@ -1,6 +1,7 @@
 # currentWorkingDirectory = "C:\\(...)\\project1"
 # currentWorkingDirectory = "D:\BHT-university\advanced software engineering-Fortgeschrittene Softwaretechnik\project\berlingeoheatmap_project1"
-currentWorkingDirectory = "C:/Users/dsouz/OneDrive/Desktop/project_1"
+currentWorkingDirectory = os.path.dirname(os.path.abspath(__file__))
+
 
 # -----------------------------------------------------------------------------
 import os
@@ -18,9 +19,9 @@ def main():
     """Main: Generation of Streamlit App for visualizing electric charging stations & residents in Berlin"""
    # Load datasets
    # plz_geo_file = "D:/BHT-university/advanced software engineering-Fortgeschrittene Softwaretechnik/project/plz_geo.json"
-    plz_geo_file = "C:/Users/dsouz/OneDrive/Desktop/project_1/datasets/geodata_berlin_plz.csv"
-    ladesaeulen_file = "C:/Users/dsouz/OneDrive/Desktop/project_1/datasets/Ladesaeulenregister.csv"
-    residents_file = "C:/Users/dsouz/OneDrive/Desktop/project_1/datasets/plz_einwohner.csv"
+    plz_geo_file = os.path.join(currentWorkingDirectory, "datasets", "geodata_berlin_plz.csv")
+    ladesaeulen_file = os.path.join(currentWorkingDirectory, "datasets", "Ladesaeulenregister.csv")
+    residents_file = os.path.join(currentWorkingDirectory, "datasets", "plz_einwohner.csv")
 
     # Reading GeoDataFrame for PLZ geometries
     # df_geodat_plz = gpd.read_file(plz_geo_file)
