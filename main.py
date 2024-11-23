@@ -1,10 +1,11 @@
 # currentWorkingDirectory = "C:\\(...)\\project1"
 # currentWorkingDirectory = "D:\BHT-university\advanced software engineering-Fortgeschrittene Softwaretechnik\project\berlingeoheatmap_project1"
-currentWorkingDirectory = "C:/Users/dsouz/OneDrive/Desktop/project_1"
+# currentWorkingDirectory = "C:/Users/dsouz/OneDrive/Desktop/project_1"
 
 # -----------------------------------------------------------------------------
 import os
-#os.chdir(currentWorkingDirectory)
+currentWorkingDirectory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(currentWorkingDirectory)
 print("Current working directory\n" + os.getcwd())
 
 import pandas as pd
